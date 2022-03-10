@@ -32,5 +32,9 @@
     "start-storybook": "start-storybook",
     "build-storybook": "build-storybook",
     "test:chromatic": "yarn chromatic --project-token=4aeac8435ddf"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d74814617ae804c4a757dbb47c74aceb4d61db30"
 }
