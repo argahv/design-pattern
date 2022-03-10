@@ -5,7 +5,7 @@ node_modules
 .pnp
 .pnp.js
 
-# Libraries
+# Libraries from packages/
 lib/*
 
 # testing
