@@ -3,7 +3,7 @@ import React, {
   useRef,
   useEffect,
   KeyboardEventHandler,
-  createRef,
+  createRef
 } from "react";
 
 import Text from "../../atoms/Text";
@@ -13,7 +13,7 @@ export const KEY_CODES = {
   SPACE: 32,
   DOWN_ARROW: 40,
   ESC: 27,
-  UP_ARROW: 38,
+  UP_ARROW: 38
 };
 
 export interface SelectOption {
@@ -68,7 +68,7 @@ const Select: React.FunctionComponent<SelectProps> = ({
   options = [],
   label = "Please select an option ...",
   onOptionSelected: handler,
-  renderOption,
+  renderOption
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedIndex, setSelectedIndex] = useState<null | number>(null);
@@ -106,7 +106,7 @@ const Select: React.FunctionComponent<SelectProps> = ({
     setHighlightedIndex(optionIndex);
   };
 
-  const onButtonKeyDown: KeyboardEventHandler = (event) => {
+  const onButtonKeyDown: KeyboardEventHandler = event => {
     event.preventDefault();
 
     if (
@@ -122,7 +122,7 @@ const Select: React.FunctionComponent<SelectProps> = ({
   };
 
   useEffect(() => {
-    setOptionRefs(options.map((_) => createRef<HTMLLIElement>()));
+    setOptionRefs(options.map(_ => createRef<HTMLLIElement>()));
   }, [options.length]);
 
   useEffect(() => {
@@ -135,7 +135,7 @@ const Select: React.FunctionComponent<SelectProps> = ({
     }
   }, [isOpen, highlightedIndex]);
 
-  const onOptionKeyDown: KeyboardEventHandler = (event) => {
+  const onOptionKeyDown: KeyboardEventHandler = event => {
     if (event.keyCode === KEY_CODES.ESC) {
       setIsOpen(false);
 
@@ -230,9 +230,9 @@ const Select: React.FunctionComponent<SelectProps> = ({
                             `,
                   key: option.value,
                   onClick: () => onOptionSelected(option, optionIndex),
-                  ...overrideProps,
+                  ...overrideProps
                 };
-              },
+              }
             };
 
             if (renderOption) {
