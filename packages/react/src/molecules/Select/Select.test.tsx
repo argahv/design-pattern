@@ -3,19 +3,23 @@ import Select from "./Select";
 
 import { render, fireEvent } from "@testing-library/react";
 
+/**
+ * @jest-environment jsdom
+ */
+
 const options = [
   {
     label: "Strict Black",
-    value: "strict-black",
+    value: "strict-black"
   },
   {
     label: "Heavenly Green",
-    value: "heavenly-green",
+    value: "heavenly-green"
   },
   {
     label: "Sweet Pink",
-    value: "pink",
-  },
+    value: "pink"
+  }
 ];
 
 test("renders all options passed to it", () => {
