@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     branches:
       - main
@@ -21,7 +20,7 @@ jobs:
         run: yarn build
       # - name: Automated tests
       #   run: yarn test
-      - name: Visual Regression tests
+      - name: Visual regression tests
         env:
-          CHROMATC_PROJECT_TOKEN: ${{secrets.CHROMATC_PROJECT_TOKEN}}
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         run: yarn test:chromatic
