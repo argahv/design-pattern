@@ -31,7 +31,7 @@
     "test:watch": "yarn jest --env=jsdom --watchAll",
     "start-storybook": "start-storybook",
     "build-storybook": "build-storybook",
-    "test:chromatic": "yarn chromatic --project-token=4aeac8435ddf"
+    "test:chromatic": "yarn chromatic --project-token=\"$CHROMATIC_PROJECT_TOKEN\""
   },
   "publishConfig": {
     "access": "public"
